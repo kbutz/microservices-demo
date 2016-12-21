@@ -1,0 +1,13 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorator="layout">
+<body>
+<div layout:fragment="content">
+    <h1>Hello, World!</h1>
+    <div class="list-group">
+       <p th:text="${helloString}"></p>
+    </div>
+</div>
+</body>
+</html>

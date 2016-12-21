@@ -1,0 +1,14 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorator="layout">
+<body>
+<div layout:fragment="content">
+    <h1>Grocery List</h1>
+    <div class="list-group">
+        <a th:each="grocery: ${groceries}"
+           th:href="@{/grocery/{id}(id=${grocery.id})}" th:text="${grocery.itemName + ' - ' + grocery.notes}" class="list-group-item">title</a>
+    </div>
+</div>
+</body>
+</html>
